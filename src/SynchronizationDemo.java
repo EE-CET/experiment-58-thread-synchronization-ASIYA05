@@ -8,10 +8,10 @@ class Table {
     }
 }
 
-class MyThread1 extends Thread {
+class Thread1 extends Thread {
     Table t;
 
-    MyThread1(Table t) {
+    Thread1(Table t) {
         this.t = t;
     }
 
@@ -20,10 +20,10 @@ class MyThread1 extends Thread {
     }
 }
 
-class MyThread2 extends Thread {
+class Thread2 extends Thread {
     Table t;
 
-    MyThread2(Table t) {
+    Thread2(Table t) {
         this.t = t;
     }
 
@@ -37,8 +37,8 @@ public class SynchronizationDemo {
 
         Table obj = new Table();
 
-        MyThread1 t1 = new MyThread1(obj);
-        MyThread2 t2 = new MyThread2(obj);
+        Thread1 t1 = new Thread1(obj);
+        Thread2 t2 = new Thread2(obj);
 
         t1.start();
         t2.start();
